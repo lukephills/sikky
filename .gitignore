@@ -18,3 +18,5 @@ npm-debug.log
 *.ts.html
 typings/*
 !typings/created/
+*.sublime-project
+*.sublime-workspace

@@ -1,10 +1,14 @@
-# v.0.10.0
+# v.0.10.1
 
-**Not pushed YET!**
+- made it compatible with sublime
+- added code format options to `tsconfig.json`
+- improved `TSLint`
+
+# v.0.10.0
 
 - major refactoring of the CI integration. Travis now runs on both OSX and Linux. AppVeyor runs on both the x86 and x64 platform.
 - improved VSCode configuration
-- ...
+- verified to be used on handheld devices
 
 # v.0.9.8
 
