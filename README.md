@@ -114,7 +114,7 @@ It's integrated a `tdd` task both for the browser tests, and server tests.
 
 ## Server testing
 
-Server testing is done with Mocha + Chai, and is also integrated with the `VSCode`.
+Server testing is done with `Mocha + Chai`, and is also integrated with the `VSCode`.
 
 ## Android and iOS
 

@@ -33,4 +33,4 @@ test:
 
 general:
   artifacts:
-    - reports
+    - "./coverage/lcov-report/"

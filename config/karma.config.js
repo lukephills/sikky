@@ -42,8 +42,6 @@ module.exports = (config) => {
 				]
 			},
 			bundle: {
-				intro: '(function() {',
-				outro: '})();',
 				sourceMap: true
 			}
 		},
@@ -66,10 +64,11 @@ module.exports = (config) => {
 		},
 		colors: true,
 		autoWatch: false,
-		browsers: ['Chrome'],
+		browsers: ['Chrome'], // Alternatively: 'PhantomJS'
 		frameworks: ['mocha', 'chai', 'sinon-chai'],
 		reporters: ['mocha', 'coverage'],
-		concurrency: 4,
+		captureTimeout: 6000,
+    concurrency: 4,
 		browserDisconnectTimeout: 10000,
 		browserDisconnectTolerance: 2,
 		browserNoActivityTimeout: 30000,
