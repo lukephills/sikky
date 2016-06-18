@@ -1,3 +1,7 @@
+# v.0.10.4
+
+- added support for wallaby
+
 # v.0.10.1
 
 - made it compatible with sublime
