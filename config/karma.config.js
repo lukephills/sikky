@@ -14,7 +14,6 @@ module.exports = (config) => {
       { pattern: 'test/browser-tests/**/*.ts', included: true, watched: true },
 		],
 		preprocessors: {
-			'src/**/*.ts': ['rollup'],
 			'test/browser-tests/**/*.ts': ['rollup', 'sourcemap']
 		},
 		rollupPreprocessor: {
@@ -46,7 +45,7 @@ module.exports = (config) => {
 			}
 		},
 		coverageReporter: {
-			dir: './coverage',
+			dir: 'coverage',
 			reporters: [
 				{ type: 'text' },
 				{ type: 'lcov' },
