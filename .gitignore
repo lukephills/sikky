@@ -1,22 +1,41 @@
+# See http://help.github.com/ignore-files/ for more about ignoring files.
+
+# compiled output
+/dist
+/tmp
+
+# dependencies
+/node_modules
+/bower_components
+
+# sublime
+*.sublime-project
+*.sublime-workspace
+
+# misc
+/.sass-cache
+/connect.lock
+/coverage/*
+/libpeerconnection.log
+npm-debug.log
+testem.log
 build
-.DS_Store
-ehthumbs.db
-Icon?
-Thumbs.db
-.idea
-.vscode
-.npm-debug
-.idea/
+*.ts.html
 .*.swp
 .*.un~
 *.iml
 .tmp
-coverage
-node_modules
-typings
+.vscodeignore
+.env.deploy.*
+.DS_Store
+jsconf.json
+fastboot-dist
+.idea
+.vscode
+.*.un~
+*.iml
+ehthumbs.db
+Icon?
+Thumbs.db
 npm-debug.log
-*.ts.html
-typings/*
-!typings/created/
-*.sublime-project
-*.sublime-workspace
+coverage
