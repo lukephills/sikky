@@ -1,6 +1,9 @@
+# v.0.10.8
+
+- updated NPM packages
+
 # v.0.10.7
 
--
 - updated readme
 
 # v.0.10.6
