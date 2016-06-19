@@ -1,3 +1,9 @@
+# v.0.10.6
+
+- updated `rollup-plugin-coverage` to latest version.
+- now support sourcemap with coverage through `rollup-plugin-coverage`. See [rollup-plugin-coverage](https://gitlab.com/kflash/rollup-plugin-coverage) on how to
+  activate sourcemap support.
+
 # v.0.10.5
 
 - replaced `rollup-plugin-istanbul` with `rollup-plugin-coverage` to fix `ES2015` issues, and use latest `Istanbul`
