@@ -122,6 +122,7 @@ It's integrated a `tdd` task both for the browser tests, and server tests.
 
 The library is set up to integrate with [`Coveralls.io`](https://coveralls.io/), and are using [`Istanbul`](https://github.com/gotwarlost/istanbul) and the
 [`rollup-plugin-coverage`](https://gitlab.com/kflash/rollup-plugin-coverage) plugin to generate coverage report.
+Sourcemap is supported for the coverage plugin.
 
 ## Server testing
 
