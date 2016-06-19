@@ -126,7 +126,7 @@ Sourcemap is supported for the coverage plugin.
 
 ## Server testing
 
-Server testing is done with `Mocha + Chai`. The server tests can be run fromt the command line - `npm run test:node` -, or within the `VSCode editor`.
+Server testing is done with `Mocha + Chai`. The server tests can be run from the command line - `npm run test:node` -, or within the `VSCode editor`.
 
 ## Android and iOS
 
