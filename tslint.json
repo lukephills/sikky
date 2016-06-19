@@ -1,17 +1,12 @@
 {
   "rules": {
-    "align": [true,
-      "parameters",
-      "arguments",
-      "statements"
-    ],
     "ban": false,
     "class-name": true,
     "comment-format": [true, "check-space"],
     "curly": true,
     "eofline": false,
     "forin": true,
-    "indent": [true, "spaces"],
+    "indent": [true, "tabs"],
     "jsdoc-format": true,
     "label-position": true,
     "label-undefined": true,
@@ -21,7 +16,7 @@
     "new-parens": true,
     "no-any": false,
     "no-arg": true,
-    "no-bitwise": true,
+    "no-bitwise": false,
     "no-console": [false],
     "no-construct": true,
     "no-constructor-vars": true,
