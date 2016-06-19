@@ -1,5 +1,5 @@
 const buble = require('rollup-plugin-buble');
-const istanbul = require('rollup-plugin-istanbul');
+const istanbul = require('rollup-plugin-coverage');
 const TSPlugin = require('rollup-plugin-typescript');
 const multiEntry = require('rollup-plugin-multi-entry').default;
 const TSConfig = require('../tsconfig.json');

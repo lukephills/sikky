@@ -1,3 +1,7 @@
+# v.0.10.5
+
+- replaced `rollup-plugin-istanbul` with `rollup-plugin-coverage` to fix `ES2015` issues, and use latest `Istanbul`
+
 # v.0.10.4
 
 - added support for wallaby
