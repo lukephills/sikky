@@ -3,6 +3,7 @@
 - updated `rollup-plugin-coverage` to latest version.
 - now support sourcemap with coverage through `rollup-plugin-coverage`. See [rollup-plugin-coverage](https://gitlab.com/kflash/rollup-plugin-coverage) on how to
   activate sourcemap support.
+- improved Karma integration
 
 # v.0.10.5
 
