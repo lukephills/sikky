@@ -1,3 +1,8 @@
+# v.0.10.7
+
+-
+- updated readme
+
 # v.0.10.6
 
 - updated `rollup-plugin-coverage` to latest version.

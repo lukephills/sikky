@@ -29,7 +29,7 @@ A complete bundle time is assumed to be around 2 ms, and 4 ms for the browser te
 - [x] [Mocha](https://mochajs.org/) & [Chai](http://chaijs.com/) de facto standard
 - [x] [Sinon](http://sinonjs.org/) for test doubles
 - [x] Environment variabels
-- [x] Code Coverage with Istanbul
+- [x] Code Coverage with [Istanbul](https://github.com/gotwarlost/istanbul)
 - [x] Production and development build with [Rollup](http://rollupjs.org/).
 - [x] ECMAScript 2015 modules in Node.
 - [x] Allow dead code elimination for ES6 modules
@@ -110,13 +110,18 @@ It's integrated a `tdd` task both for the browser tests, and server tests.
 
 ## Code coverage
 
-`Istanbul` are used to generate the coverage report.
+The library is set up to integrate with [`Coveralls.io`](https://coveralls.io/), and are using [`Istanbul`](https://github.com/gotwarlost/istanbul) and the
+[`rollup-plugin-coverage`](https://gitlab.com/kflash/rollup-plugin-coverage) plugin to generate coverage report.
 
 ## Server testing
 
-Server testing is done with `Mocha + Chai`, and is also integrated with the `VSCode`.
+Server testing is done with `Mocha + Chai`. The server tests can be run fromt the command line - `npm run test:node` -, or within the `VSCode editor`.
 
 ## Android and iOS
 
 This boilerplate is tested against Travis CI configured to run `Android` with `SDK version android-19 - 23`.
 It's not tested with `iOS`. But the conlusion is that this works just fine.
+
+## Browser tests
+
+Browser testing are done with Karma as the test runner. Rollup pre-processor are used together with `Bublé`.
