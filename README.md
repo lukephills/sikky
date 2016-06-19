@@ -104,8 +104,11 @@ Did you mean to include 'new'?
 `Travis`, `Circle` and `Appveyor` are the only supported `CI`. `Travis` is setup to work with Linux and OSX.
 `Appveyor` only runs in a `Windows` environment, but are configured to run on both the `x86` and `x64` platform.
 
-**Note!** You need to change permissons on the `.sh` files. Navigate to the 'scripts/ci' folder, and then (*if you are using git*) type this on the command line: `update-index --chmod=+x before.sh`. The permissons will now change from `644` to `755`.
-`before.sh` need to be changed with the name on the other files to change permisson on all files.
+You will need to change permissons on the `.sh` files used by `Travis`. 
+
+Navigate to the `scripts/ci` folder, and then (*if you are using git*) type this on the command line: `update-index --chmod=+x before.sh`. The permissons will now change from `644` to `755`.
+
+Change `before.sh` with the name on the other files to change permisson on all files.
 
 ## Test-driven development (TDD)
 
