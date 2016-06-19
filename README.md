@@ -119,9 +119,32 @@ Server testing is done with `Mocha + Chai`. The server tests can be run fromt th
 
 ## Android and iOS
 
-This boilerplate is tested against Travis CI configured to run `Android` with `SDK version android-19 - 23`.
+This boilerplate is tested against `Travis CI` configured to run `Android` with `SDK version android-19 - 23`.
 It's not tested with `iOS`. But the conlusion is that this works just fine.
 
-## Browser tests
+## Browser testing
 
-Browser testing are done with Karma as the test runner. Rollup pre-processor are used together with `Bublé`.
+Browser testing are done with Karma as the test runner. Rollup preprocessor are used together with `Bublé`. This can very easily be swapped out
+with another solution. A `rollup-plugin-babel` plugin can be used if you prefer `Babel` over `Bublé`.
+
+## Linting
+
+This boilerplate uses `TSLint` to lint your source. To change the rules, edit the .tslint.json` file in the root directory, respectively.
+
+## FAQ
+
+### When should I consider using this boilerplate?
+
+This library is ideal for libraries that export a single file.
+
+### Will this boilerplate always support the last on the market?
+
+Yes. It will always be up-to-date.
+
+### What's the browser compatibility?
+
+As a rule of thumb, `TypeScript`, `Bublé` and `Babel` works best in `IE9` and above.
+
+### What's the cost of transpiling?
+
+A thorough analysis of this question can be found [here](https://github.com/samccone/The-cost-of-transpiling-es2015-in-2016).
