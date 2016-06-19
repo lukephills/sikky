@@ -1,3 +1,7 @@
+# v.0.10.10
+
+- improved browser testing
+
 # v.0.10.9
 
 - updated to latest rollup-plugin-typescript version (0.7.6)

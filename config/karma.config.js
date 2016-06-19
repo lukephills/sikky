@@ -20,16 +20,10 @@ module.exports = (config) => {
 			rollup: {
 				plugins: [
 					multiEntry(),
-					TSPlugin(
-						// 'rollup's typescript plugin are using TS v. 1.8 by default.
-						// To be able to use latest TS 2.0 Pre version, we need to overwrite it because.
-						// the plugin doesn't automatically pick up the installed TS in 'mode_modules'
-						Object.assign(TSConfig.compilerOptions, {
-							typescript: TypeScript, // TS 2.0 Pre
-							module: 'es6',
-							declaration: false
-						})
-					),
+					// 'rollup's typescript plugin are using TS v. 1.8 by default.
+					// To be able to use latest TS 2.0 Pre version, we need to overwrite it because.
+					// the plugin doesn't automatically pick up the installed TS in 'mode_modules'
+					TSPlugin(Object.assign(TSConfig.compilerOptions, { typescript: TypeScript })),
 					buble({
 						exclude: 'node_modules/**'
 					}),
