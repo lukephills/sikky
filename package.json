@@ -1,6 +1,6 @@
 {
   "name": "sikky",
-  "version": "0.11.1",
+  "version": "0.11.3",
   "description": "TypeScript 2.0 Pre boilerplate for node and the browser. Tests in Mocha, Chai and Sinon. TSLint for better code quality",
   "main": "dist/sikky.es5.js",
   "jsnext:main": "dist/sikky.es.js",
@@ -103,7 +103,7 @@
     "sinon": "^1.17.4",
     "sinon-chai": "^2.8.0",
     "rimraf": "^2.5.2",
-    "ts-node": "^0.9.1",
+    "ts-node": "^0.9.2",
     "tslint": "^3.11.0",
     "typescript": "next"
   },

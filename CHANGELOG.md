@@ -1,3 +1,7 @@
+# v.0.11.2
+
+- updated NPM packages
+
 # v.0.11.1
 
 - **BC!** Bundles files now have a new file extension. `.es.js`, `.js` and `min.js`.
