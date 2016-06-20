@@ -10,17 +10,10 @@ const pkg = require('../package.json');
 const PRODUCTION = process.env.NODE_ENV === 'production';
 
 export default {
-	entry: path.resolve('dist/sikky.js'),
+	entry: path.resolve('build/sikky.js'),
 	useStrict: false,
-  banner:
-	'/**\n' +
-	' * ' + pkg.name + '\n' +
-	' * @version ' + pkg.version + '\n' +
-	' * @copyright (c) 2016 ' + pkg.author + '\n' +
-	' * @license MIT <'+ pkg.homepage + '/blob/master/LICENSE>\n' +
-	' */',
 	plugins: [
-		PRODUCTION ? uglify({
+		uglify({
 			warnings: false,
 			compress: {
 				screw_ie8: true,
@@ -28,18 +21,18 @@ export default {
 				unused: true,
 				drop_debugger: true
 			}
-		}) : {},
+		}),
 		nodeResolve({ jsnext: true, main: true }),
 		commonjs({ include: 'node_modules/**' }),
-		strip({ debugger: PRODUCTION ? true : false }),
+		strip({ debugger: true }),
 		replace({ 'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV) }),
 		buble(),
 	],
 	targets: [
 		{
-			dest: path.resolve(`dist/sikky.${PRODUCTION ? 'min.es5.js' : 'es5.js'}`),
+			dest: path.resolve('dist/'+ pkg.name +'.min.js'),
       format: 'umd',
-	    moduleName: 'sikky',
+	    moduleName: pkg.name,
 	    sourceMap: true
     }
   ]

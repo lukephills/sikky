@@ -1,3 +1,13 @@
+# v.0.11.1
+
+- **BC!** Bundles files now have a new file extension. `.es.js`, `.js` and `min.js`.
+- improved build performance
+- separate Rollup config files for development and production builds
+- refactored support for ES modules
+- 'es6' are now deprecated
+- improved performance
+- updated NPM packages
+
 # v.0.11.0
 
 - run node.js v. 6 on Circle CI

@@ -1,2 +1,0 @@
-!function(e,n){"object"==typeof exports&&"undefined"!=typeof module?module.exports=n():"function"==typeof define&&define.amd?define(n):e.sikky=n()}(this,function(){function e(e,n){return e+n}return e});
-//# sourceMappingURL=sikky.min.es5.js.map

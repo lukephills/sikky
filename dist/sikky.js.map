@@ -1,1 +1,1 @@
-{"version":3,"file":"sikky.js","sourceRoot":"","sources":["../src/sikky.ts"],"names":[],"mappings":";;;;;;;;;IAAA;sBAAe,UAAC,CAAS,EAAE,CAAS,IAAa,OAAA,CAAC,GAAG,CAAC,EAAL,CAAK,CAAC"}
+{"version":3,"file":null,"sources":["../build/sikky.js"],"sourcesContent":["export default function (x, y) { return x + y; };\r\n"],"names":[],"mappings":";;;;;;;;;;;;AAAA,iBAAyB,CAAC,EAAE,CAAC,EAAE,EAAE,OAAO,CAAC,GAAG,CAAC,CAAC,EAAE,CAAC;;;;"}
