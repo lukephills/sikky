@@ -1,3 +1,7 @@
+# v.0.11.0
+
+- run node.js v. 6 on Circle CI
+
 # v.0.10.10
 
 - improved browser testing

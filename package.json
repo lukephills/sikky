@@ -1,6 +1,6 @@
 {
   "name": "sikky",
-  "version": "0.10.9",
+  "version": "0.11.0",
   "description": "TypeScript 2.0 Pre boilerplate for node and the browser. Tests in Mocha & Chai. TSLint for better code quality",
   "main": "dist/sikky.es5.js",
   "jsnext:main": "dist/sikky.js",
@@ -27,7 +27,6 @@
     "nodejs",
     "ts-node",
     "tslint",
-    "jsnext",
     "ecmascript",
     "TypeScript",
     "microsoft",
@@ -61,7 +60,6 @@
     "dependencies:check": "ncu",
     "dependencies:upgrade": "ncu -u",
     "prebuild": "tsc src/sikky.ts --outDir dist -t es5 --m es6 --declaration --skipLibCheck",
-    "postpublish": "git push origin master --follow-tags",
     "test": "npm run test:browser && npm run test:node",
     "test:browser": "cross-env NODE_ENV=test karma start ./config/karma.config.js --no-auto-watch --single-run",
     "test:node": "cross-env NODE_ENV=test npm run lint:tests && mocha --recursive  test/node-tests/**/*.ts --require ts-node/register -R spec --bail",
