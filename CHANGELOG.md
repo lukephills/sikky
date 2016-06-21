@@ -1,3 +1,8 @@
+# v.0.11.4
+
+- speeding up the build process
+- removed a Rollup dependency
+- 
 # v.0.11.2
 
 - updated NPM packages
