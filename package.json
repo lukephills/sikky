@@ -2,7 +2,7 @@
   "name": "sikky",
   "version": "0.11.3",
   "description": "TypeScript 2.0 Pre boilerplate for node and the browser. Tests in Mocha, Chai and Sinon. TSLint for better code quality",
-  "main": "dist/sikky.es5.js",
+  "main": "dist/sikky.js",
   "jsnext:main": "dist/sikky.es.js",
   "author": "KFlash",
   "homepage": "https://github.com/kflash/sikky",
