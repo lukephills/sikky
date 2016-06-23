@@ -29,7 +29,7 @@ module.exports = {
             {
                 test: /\.ts(x?)$/,
                 loader: 'babel-loader!awesome-typescript-loader',
-                exclude:  [/\.(e2e|async)\.ts$/]
+                exclude:  [/\.(e2e|async)\.ts(x?)$/]
             }
         ]
     }
