@@ -8,7 +8,7 @@ const pkg = require('../../package.json');
 
 export default {
   entry: path.resolve('build/src/sikky.js'),
-  plugins: [ 
+  plugins: [
   uglify({
 			warnings: false,
 			compress: {
@@ -25,7 +25,7 @@ export default {
   ],
   targets: [
     {
-      dest: path.resolve('dist/finale/'+ pkg.name +'.min.js'),
+      dest: path.resolve('dist-finale/'+ pkg.name +'.min.js'),
       format: 'umd',
       moduleName: pkg.name,
       sourceMap: false

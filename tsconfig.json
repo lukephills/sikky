@@ -1,6 +1,7 @@
 {
 	"buildOnSave": false,
-	"compileOnSave": false,
+	"compileOnSave": true,
+
 	"compilerOptions": {
 	"allowJs": false,
 	"allowUnreachableCode": false,
@@ -27,8 +28,9 @@
   "!./node_modules/**"
 ],
   "exclude": [
-    "build/",
+    "build",
     "dist",
+    "config",
     "node_modules"
   ],
   "awesomeTypescriptLoaderOptions": {

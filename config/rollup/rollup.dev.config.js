@@ -34,7 +34,7 @@ export default {
     },
     // ES Modules
     {
-      dest: path.resolve('dist/finale/' + pkg.name + '.mjs'),
+      dest: path.resolve('dist-finale/' + pkg.name + '.mjs'),
       format: 'es',
       sourceMap: false
     }
