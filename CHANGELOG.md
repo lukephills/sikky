@@ -1,3 +1,7 @@
+# v.1.0.5
+
+- fixed coverage report issue
+
 # v.1.0.4
 
 - fixed issues with TSLint
