@@ -1,2 +1,2 @@
-const testContext = require.context('../test', true, /\.*(browser|node).ts(x?)$/);
-const modules = testContext.keys().map(testContext);
+const testContext = require.context('../test', true, /\.*(browser|node).ts(x?)$/); // make sure you have your directory and regex test set correctly!
+testContext.keys().map(testContext);
