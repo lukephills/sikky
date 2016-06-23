@@ -30,7 +30,6 @@ build
 jsconf.json
 fastboot-dist
 .idea
-.vscode
 .*.un~
 *.iml
 ehthumbs.db
