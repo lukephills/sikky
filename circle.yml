@@ -27,7 +27,6 @@ test:
     - npm start:
         background: true
   override:
-   - nvm use 5 && npm test
    - nvm use 'stable' && npm test
 
 general:
