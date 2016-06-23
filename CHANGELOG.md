@@ -1,3 +1,8 @@
+# v.1.0.3
+
+- ignore imported style files when running in Node
+- added JSDom for node tests
+
 # v.1.0.2
 
 - refactored server testing. `ts-node + mocha` by default.Debuggin enabled by default. Open port `5858`.

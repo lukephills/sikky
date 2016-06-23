@@ -161,7 +161,9 @@ Browser testing are done with `mocha+chai+sinon`. Debugging are enabled by defau
 
 All server related tests are located inside the `test/node-tests folder`, and named with a node extension. E.g. `foo.node.ts`.
 
-You don't have to import testing framework related files such as `Chai`, `Sinon` etc. This have been done automatically.
+`JsDOM` are used to fake DOM on the server.
+
+**Note!** There is no need to manually import testing framework related packages such as `Chai`, `Sinon` etc. This have been done automatically.
 
 ## Browser testing
 
