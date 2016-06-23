@@ -1,3 +1,7 @@
+# v.1.0.1
+
+- bug fixes
+
 # v.1.0.0
 
 - BC!! Major refactoring

@@ -1,5 +1,8 @@
-describe('Simple tests', () => {
-    it('should really just pass', () => {
-        // assert.ok(true)
+import { expect } from 'chai';
+
+describe('node tests', () => {
+
+    it('works!', () => {
+        expect(true).to.be.true;
     });
 });
