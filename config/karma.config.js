@@ -1,76 +1,44 @@
-const buble = require('rollup-plugin-buble');
-const istanbul = require('rollup-plugin-coverage');
-const TSPlugin = require('rollup-plugin-typescript');
-const multiEntry = require('rollup-plugin-multi-entry').default;
-const TSConfig = require('../tsconfig.json');
-const TypeScript = require('typescript');
-
+const webpackConfig  = require('./webpack/webpack.karma.config');
 const isCI = process.env.CONTINUOUS_INTEGRATION === 'true';
 
-module.exports = (config) => {
-	config.set({
-    basePath: '..',
-		files: [
-      { pattern: 'test/browser-tests/**/*.ts', included: true, watched: true },
-		],
-		preprocessors: {
-			'test/browser-tests/**/*.ts': ['rollup', 'sourcemap']
-		},
-		rollupPreprocessor: {
-			rollup: {
-				plugins: [
-					multiEntry(),
-					// 'rollup's typescript plugin are using TS v. 1.8 by default.
-					// To be able to use latest TS 2.0 Pre version, we need to overwrite it because.
-					// the plugin doesn't automatically pick up the installed TS in 'mode_modules'
-					TSPlugin(Object.assign(TSConfig.compilerOptions, { typescript: TypeScript })),
-					buble({
-						exclude: 'node_modules/**'
-					}),
-					istanbul({
-						include: ['**/*.ts'], // we need this to avoid the multi-entry plugin from throwing errors
-						ignore: ['**/node_modules/**', '**/test/**'],
-						exclude: ['test/**/*.ts']
-					})
-				]
-			},
-			bundle: {
-				sourceMap: true
-			}
-		},
+module.exports = function (config) {
+
+	const configuration = {
+
+		basePath: '..',
+		files: [ { pattern: './test/main.js', watched: false } ],
+		preprocessors: { './test/main.js': ['coverage', 'webpack', 'sourcemap'] },
+		frameworks: ['mocha', 'chai', 'sinon', 'source-map-support'],
+		excluded: [],
+		webpack: webpackConfig,
 		coverageReporter: {
-			dir: 'coverage',
+			dir: 'coverage/',
 			reporters: [
 				{ type: 'text' },
 				{ type: 'lcov' },
-				{ type: 'text-summary' }
+				{ type: 'text-summary' },
+				{ type: 'json', subdir: '.', file: 'coverage-final.json' },
+				{ type: 'html' }
 			]
 		},
-
-		logLevel: config.LOG_INFO,
-
-		client: {
-      args: ['--grep', config.grep || ''],
-		  // change Karma's debug.html to the mocha web reporter
-    	mocha: {
-				reporter: 'html'
-			}
-		},
-		colors: true,
-		autoWatch: false,
-		browsers: ['Chrome'], // Alternatively: 'PhantomJS'
-		frameworks: ['mocha', 'chai', 'sinon-chai'],
+		webpackServer: { noInfo: true },
 		reporters: ['mocha', 'coverage'],
-		captureTimeout: 6000,
-    concurrency: 4,
-		browserDisconnectTimeout: 10000,
-		browserDisconnectTolerance: 2,
-		browserNoActivityTimeout: 30000,
-	});
-
-	if (isCI) {
-		config.captureTimeout = 0;
-		// Push 'coveralls' to the reporters array if Travis or Circle are running
-		config.reporters.push('coveralls');
+		mochaReporter: { output: 'autowatch' },
+		port: 9876,
+		captureTimeout: 60000,
+		browserDisconnectTimeout : 60000,
+		browserDisconnectTolerance : 3,
+		browserNoActivityTimeout : 60000,
+		colors: true,
+		logLevel: config.LOG_INFO,
+		autoWatch: false,
+		browsers: ['Chrome'],
+		singleRun: true
 	}
-};
+	
+    if (isCI) {
+		configuration.reporters.push('coveralls');
+	}
+
+	config.set(configuration);
+}

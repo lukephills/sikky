@@ -1,7 +1,6 @@
 # See http://help.github.com/ignore-files/ for more about ignoring files.
 
 # compiled output
-/dist
 /tmp
 
 # dependencies
@@ -39,3 +38,4 @@ Icon?
 Thumbs.db
 npm-debug.log
 coverage
+debug.log

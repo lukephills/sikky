@@ -1,31 +1,38 @@
-{ "buildOnSave": false,
-  "compileOnSave": false,
-  "compilerOptions":
-  {
-    "types": ["mocha"],
-    "allowJs": false,
-    "allowUnreachableCode": false,
-    "noImplicitAny": true,
-    "strictNullChecks": true,
-    "newLine": "LF",
-    "jsx": "preserve",
-    "target": "es5",
-    "pretty": true,
-    "removeComments": false,
-    "moduleResolution": "node",
-    "experimentalDecorators": true,
-    "suppressImplicitAnyIndexErrors": false,
-    "inlineSources": true,
-    "inlineSourceMap": true,
-    "noEmitHelpers": true
-  },
+{
+	"buildOnSave": false,
+	"compileOnSave": false,
+	"compilerOptions": {
+	"allowJs": false,
+	"allowUnreachableCode": false,
+	"declaration": false,
+	"experimentalDecorators": true,
+	"jsx": "preserve",
+	"moduleResolution": "node",
+	"noEmitHelpers": true,
+	"newLine": "LF",
+	"noImplicitAny": true,
+	"noLib": false,
+	"outDir": "build",
+	"removeComments": false,
+	"strictNullChecks": true,
+	"sourceMap": false,
+	"inlineSourceMap": false,
+	"suppressImplicitAnyIndexErrors": false,
+	"target": "es6",
+    "types": ["mocha", "chai", "sinon"]
+},
+  "filesGlob": [
+	"src/**/*.ts",
+  "src/**/*.tsx",
+  "!./node_modules/**"
+],
   "exclude": [
-    "build",
+    "build/",
     "dist",
     "node_modules"
   ],
-  "formatCodeOptions": {
-    "indentSize": 2,
-    "tabSize": 2
+  "awesomeTypescriptLoaderOptions": {
+    "resolveGlobs": true,
+    "forkChecker": true
   }
 }

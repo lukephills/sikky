@@ -1,8 +1,32 @@
-# v.0.11.4
+# v.1.0.0
 
-- speeding up the build process
-- removed a Rollup dependency
-- 
+- BC!! Major refactoring
+- webpack with hot reload added
+- tests can be run directly in browser. Port 8080.
+- introduced "finale bundling"
+- improved sourcemap support
+- added nodemon support
+- paralell processing
+- added a new TDD task. This task run all test and build in parallel 
+- more options for TypeScript transpiling
+- refactored how node tests are working. 
+- added code coverage for node tests
+- improved code coverage for browser tests ( *karma test runner*)
+- Webpack used for browser tests
+- Webpack used for node tests
+- improved linting. 
+- many tasks now runs in parallel (*parallel processing*)
+- improved environment variabel support
+- improved VSCode integration
+- easier debugging with breakpoints
+- more tasks added for VSCode
+- Everything can be run from withing VSCode
+- Chrome debugging enabled for VSCode
+- Babel added for testing purpose
+- `npm run test` task now runs in paralell and excute both browser and node tests
+
+*more to be added...*
+
 # v.0.11.2
 
 - updated NPM packages

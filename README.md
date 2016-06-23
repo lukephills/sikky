@@ -1,4 +1,4 @@
-## TypeScript 2.0 Pre boilerplate for node and the browser
+## A ultimate TypeScript 2.0 Pre boilerplate for node and the browser
 
 [![Build Status](https://travis-ci.org/Kflash/sikky.svg?branch=master)](https://travis-ci.org/Kflash/sikky)
 [![CircleCI](https://circleci.com/gh/Kflash/sikky.svg?style=svg)](https://circleci.com/gh/Kflash/sikky)
@@ -8,43 +8,43 @@
 [![npm downloads](https://img.shields.io/npm/dm/sikky.svg)](https://www.npmjs.org/package/sikky)
 [![npm](https://img.shields.io/npm/l/express.svg?style=flat-square)](https://github.com/kflash/sikky/blob/master/LICENSE.md)
 
-A fast, and small sized TypeScript 2.0 boilerplate. All source files get transpiled down to `ES2015` by default. `Rollup` and `Bublé` are used to make a clean `ES2015` bundle.`Bublé` is used for compability with older browsers. Easy to get rid of or replaced with `Babel`.
-
-Debugging and server testing can be done within  `VSCode`.
-
-A complete bundle time is assumed to be around 2 ms, and 4 ms for the browser tests. Depends on your computer and the size of your source files
-
-**Note!** Version 1.0 will be pushed by tomorrow. It will change it all!!  See the Readme on the **next** branch for
-upcoming changes.
-
+A TypeScript 2.0 starter kit using all the latest technology, included the latest available 
+TypeScript version - version 2.0 Pre (*nightly build*).
 
 ## Features
 
 - [x] Statically typed build system for working with [Typescript](https://www.typescriptlang.org/) 2.0 Pre
 - [x] VSCode integration. Debug and run tests in the editor.
+- [x] Chrome dev tools integration with VSCode
 - [x] Consistent code style with [TSLint](https://palantir.github.io/tslint/).
 - [x] Intelligent code editing with [VSCode](https://code.visualstudio.com/)
 - [x] Experimental support for [ES7](https://tc39.github.io/ecma262/) decorators.
-- [x] ES Modules.
-- [x] async/await and generators support for ES5/ES3
+- [x] Async/await and generators support for ES5/ES3
+- [x] Parallel Test Driven Development (TDD)
+- [x] All up-to-date TypeScript 2.0 features
+- [x] Code Coverage with [Istanbul](https://github.com/gotwarlost/istanbul) and [Karma](https://karma-runner.github.io/0.13/index.html)
+- [x] Hot Module Replacement with Webpack
+- [x] Async/await and generators support for ES5/ES3
+- [x] ES Modules (*specs will change again*).
+- [x] Allow dead code elimination for ES6 modules
+- [x] TSX / JSX
+- [x] Complete sourcemap support
+- [x] Environment variabels
+- [x] Browser tests in browser (*port 8080*)
+- [x] [Babel](https://babeljs.io/) as the ES2015 compiler for the testing stack
 - [x] [Bublé](https://gitlab.com/Rich-Harris/buble) as the ES2015 compiler
 - [x] [Rollup](http://rollupjs.org/) for bundling
-- [x] [Karma](https://karma-runner.github.io/0.13/index.html) as the test runner
-- [x] Test Driven Development (TDD)
-- [x] [Mocha](https://mochajs.org/) & [Chai](http://chaijs.com/) de facto standard
 - [x] [Sinon](http://sinonjs.org/) for test doubles
-- [x] Environment variabels
-- [x] Code Coverage with [Istanbul](https://github.com/gotwarlost/istanbul)
-- [x] Production and development build with [Rollup](http://rollupjs.org/).
-- [x] Allow dead code elimination for ES6 modules
-- [x] SourceMap
-- [x] TSX / JSX
-- [x] Easy debugging
+- [x] iOS and Android support
+- [x] React support
+- [x] Angular2 support
+- [x] [Mocha](https://mochajs.org/) & [Chai](http://chaijs.com/) de facto standard
+- [x] Easy debugging (*parallell*)
 
 ## Quick start
 
-The only development dependency of this project is [Node.js](https://nodejs.org/en/). So just make sure you have it installed. Then
-type few commands known to every Node developer...
+The only development dependency of this project is [Node.js](https://nodejs.org/en/). So just make sure you have it installed. 
+Then type few commands known to every Node developer...
 
 ```bash
 git clone --depth 1 https://github.com/kflash/sikky.git
@@ -64,35 +64,75 @@ npm run build:prod
 * `npm run build` - transpile down to ES5 and builds a bundle both for development and production
 * `npm run build:dev` - transpile down to ES5 and builds a bundle for development
 * `npm run build:prod` - transpile down to ES5 and builds a bundle for production
-* `npm run build:vcode` - build task for the VSCode editor
-* `npm run build:watch` - watch your TypeScript files and trigger recompilation on changes.
+* `npm run build:finale` - transpile down to ES5 and builds a bundle for production with Rollup and `Bublé`
+* `npm run build:finale:prod` - transpile down to ES5 and builds a bundle for production with Rollup and `Bublé`
+* `npm run build:finale:prod` - transpile down to ES5 and builds a bundle for production with Rollup and `Bublé`
+* `npm run debug` - debug task used with the `VSCode editor`.
+* `npm run remove` - remove the dist, coverage and build folders
+* `npm run remove:build` - remove the build folder
+* `npm run remove:dist` - removed the dist folder
+* `npm run lint` - validates everything
 * `npm run lint:src` - validates all source files
 * `npm run lint:tests` - validates all test files
-* `npm run clean` - removed the dist, coverage and build folders
-* `npm run clean:build` - remove the build folder
-* `npm run clean:dist` - removed the dist folder
-* `npm run test` - run tests both for browser and node
+* `npm run test` - run tests both for browser and the `node.js environment`
 * `npm run test:browser` - run all unit tests in the browser
 * `npm run test:node` - run all unit tests in the `node.js environment`
-* `npm run tdd:browser` - run all unit tests and watch files for changes in the browser.
-* `npm run tdd:node` - run all unit tests and watch files for changes in the `node.js` environment.
-* `npm run debug` - debug task used by `VSCode`.
-* `npm run dependencies:check` - shows a list over dependencies with a higher version number then the current one - if any
-* `npm run dependencies:upgrade` - automatically upgrade all devDependencies & dependencies, and update package.json
+* `npm run watch:browser` - run all unit tests and watch files for changes in the browser.
+* `npm run watch:build` - watch your TypeScript files and trigger recompilation on changes.
+* `npm run watch:node` - run all unit tests and watch files for changes in the `node.js` environment.
+* `npm run tdd` - run all watch tasks in parallel and watch files for changes.
 
-## Node development
+## Build workflow
 
-Start the `VSCode editor`, and press `Ctrl+Shift+B` to build the project. You will see compiler output in the output window (`Ctrl+Shift+U`) indicating that TypeScript transpile your source code to `ES2015`.
+Everything is done with `Webpack`. When you are satisfied and ready to ship the code to production, you can make a nice, clean output with `Rollup`.
 
-To stop the compilation, press `Ctrl+P → > Tasks: Terminate Running Task`.
+`npm run build:finale` bundle the `finale build` files with Rollup ready for shipping. This files are put inside a sub-folder named *finale* inside
+the *dist* folder.
 
-Press `F5` to start debugging.
+**Note!** A `finale` build shaves off around 3 - 4 KB from the source code bundled with `Webpack`. Less bytes - more happy customers!!
 
-To run the Mocha tests on `node.js` - press `F1` and then type `task` to see all tasks available. Click on `test` to run the tests.
+## Visual Studio Code
 
-## Watch
+This workflow is tightly integrated with `VSCode`. In fact you can do everything from the editor.
 
-With the `npm run build:watch`, the `TypeScript 2.0` compiler will start in watch mode, and watch input files and trigger recompilation on changes. Dead code elimination for ES6 modules are activated by default, so later on you can use either
+Start the VSCode editor, and press **Ctrl+Shift+B** to compile the project. A build folder appers with the transpiled files in it. 
+
+To stop the compilation, press **Ctrl+P → > Tasks: Terminate Running Task**.
+
+If you want to debug the source code, set a **breakpoint** on line 6 in /test/browser-tests/sikky.browser.js. 
+Then press **Cmd + D** to view debugging options. 
+
+Select `Debug Current TypeScript Test` from the dropdown and press **F5** to launch the debugger.
+
+You should hit the breakpoint. Now you can press **F11** to step into function, or press **Shift+F5** to stop the debugger.
+
+**Note!** Debugging may randomly return warning on build. [See](https://github.com/Microsoft/vscode/issues/4070).
+
+Unit tests can be run by pressin **Cmd + T**. You should see results displayed in the **Output window**. 
+
+Both browser and server tests are set up to run at the same time in parallel.
+
+## Custom Type Definitions
+
+When including 3rd party modules you also need to include the type definition for the module if they don't provide one within the module. 
+From TypeScript 2.0 both `TDD` and `Typings` are *deprecated*. All definitions are now installed through `NPM packages`.
+ 
+ ```js
+ npm install @types/<package name>`. 
+ ```
+ 
+You can read more about it  [here](https://github.com/Microsoft/TypeScript/issues/9184)
+
+## Test-driven development (TDD)
+
+There exist one task for this - `npm run tdd`. This task runs all watch task in parallel.
+
+## Watch tasks
+
+It's integrated a **watch task** for server and unit testing, and a task to keep an eye on your build process. This is tightly integrated with the
+debugger task included in the `VSCode editor`.
+
+`npm run watch:build` starts the `TypeScript 2.0` compiler in watch mode, and watch input files and trigger recompilation on changes. Dead code elimination for ES6 modules are activated by default, so later on you can use either
 `Webpack 2.0` (*early beta stage*) or `Rollup` to perform tree shaking.
 
 The watch task inform you if something is wrong with your code, and can come up with suggestions on how to solve current issue.
@@ -105,22 +145,9 @@ Did you mean to include 'new'?
 
 ## Continuous integration (CI)
 
-`Travis`, `Circle` and `Appveyor` are the only supported `CI`. `Travis` is setup to work with Linux and OSX.
-`Appveyor` only runs in a `Windows` environment, but are configured to run on both the `x86` and `x64` platform.
+Travis, Circle and Appveyor are the only supported CI. Travis is setup to work with Linux and OSX. Appveyor only runs in a Windows environment, but are configured to run on both the x86 and x64 platform.
 
-You will need to change permissons on the `.sh` files used by `Travis`. 
-
-Navigate to the `scripts/ci` folder, and then (*if you are using git*) type this on the command line:
-
-                                  `update-index --chmod=+x before.sh`. 
-
-The permissons will now change from `644` to `755`. 
-
-Change `before.sh` with the name on the other files to change permisson on all files.
-
-## Test-driven development (TDD)
-
-It's integrated a `tdd` task both for the browser tests, and server tests.
+You will need to change permissons on the .sh files used by Travis.
 
 ## Code coverage
 
@@ -130,17 +157,28 @@ Sourcemap is supported for the coverage plugin.
 
 ## Server testing
 
-Server testing is done with `Mocha + Chai`. The server tests can be run from the command line - `npm run test:node` -, or within the `VSCode editor`.
+Server testing is done with `Mocha + Chai`. The server tests can be run from the command line - `npm run test:node` -, or 
+within the `VSCode editor`
+
+All server related tests are located inside the `test/node-tests folder`, and named with a node extension. E.g. `foo.node.ts`.
+
+## Browser testing
+
+Browser testing are done with `Webpack` together with Karma as the test runner. 
+
+All server related tests are located inside the `test/browser-tests folder`, and named with a node extension. E.g. `foo.browser.ts`.
+
+## Direct browser testing
+
+The browser spec runner - `./config/runner.html` - can be opened in a browser to run your tests. For it to work, you must 
+first run `npm run browser`, and open `port 8080` in your browser. 
+
+This will set up a watch task that will automatically refresh the tests when your scripts, or the tests, change.
 
 ## Android and iOS
 
 This boilerplate is tested against `Travis CI` configured to run `Android` with `SDK version android-19 - 23`.
 It's not tested with `iOS`. But the conlusion is that this works just fine.
-
-## Browser testing
-
-Browser testing are done with Karma as the test runner. Rollup preprocessor are used together with `Bublé`. This can very easily be swapped out
-with another solution. A `rollup-plugin-babel` plugin can be used if you prefer `Babel` over `Bublé`.
 
 ## Linting
 
@@ -152,7 +190,7 @@ This boilerplate uses `TSLint` to lint your source. To change the rules, edit th
 
 This library is ideal for libraries that export a single file.
 
-### Will this boilerplate always support the last on the market?
+### Will this boilerplate always support the latest technology and specs on the market?
 
 Yes. It will always be up-to-date.
 

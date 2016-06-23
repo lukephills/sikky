@@ -1,18 +1,15 @@
 import * as path from 'path';
 import buble from 'rollup-plugin-buble';
-import replace from 'rollup-plugin-replace';
 import uglify from 'rollup-plugin-uglify';
 import commonjs from 'rollup-plugin-commonjs';
+import replace from 'rollup-plugin-replace';
 import strip from 'rollup-plugin-strip';
-const pkg = require('../package.json');
-
-const PRODUCTION = process.env.NODE_ENV === 'production';
+const pkg = require('../../package.json');
 
 export default {
-	entry: path.resolve('build/sikky.js'),
-	useStrict: false,
-	plugins: [
-		uglify({
+  entry: path.resolve('build/src/sikky.js'),
+  plugins: [ 
+  uglify({
 			warnings: false,
 			compress: {
 				screw_ie8: true,
@@ -21,17 +18,17 @@ export default {
 				drop_debugger: true
 			}
 		}),
-		commonjs({ include: 'node_modules/**' }),
+   	commonjs({ include: 'node_modules/**' }),
 		strip({ debugger: true }),
 		replace({ 'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV) }),
-		buble(),
-	],
-	targets: [
-		{
-			dest: path.resolve('dist/'+ pkg.name +'.min.js'),
+    buble()
+  ],
+  targets: [
+    {
+      dest: path.resolve('dist/finale/'+ pkg.name +'.min.js'),
       format: 'umd',
-	    moduleName: pkg.name,
-	    sourceMap: true
+      moduleName: pkg.name,
+      sourceMap: false
     }
   ]
 };

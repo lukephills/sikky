@@ -37,16 +37,16 @@ cache:
     - node_modules
 
 before_install:
-  - ./scripts/ci/before.sh
+  - ./config/ci/before.sh
 
 install:
-  - ./scripts/ci/install.sh
+  - ./config/ci/install.sh
 
 script:
-  - ./scripts/ci/test.sh
+  - ./config/ci/test.sh
 
 after_success:
-  - ./scripts/ci/after.sh
+  - ./config/ci/after.sh
 
 notifications:
   email:
