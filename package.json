@@ -58,15 +58,13 @@
     "build:finale:dev": "cross-env NODE_ENV=development rollup -c ./config/rollup/rollup.dev.config.js",
     "build:finale:prod": "cross-env NODE_ENV=development npm run lint:src && rollup -c ./config/rollup/rollup.prod.config.js",
     "debug": "cross-env NODE_ENV=debug npm-run-all remove transpile:sourcemap",
-    "lint": "tslint \"!(node_modules)/**/*.ts?(x)\"",
-    "lint:src": "tslint \"src/**/*.ts?(x)\"",
+    "lint": "tslint tslint --config ./tslint.json \"!(node_modules)/**/*.ts?(x)\"",
+    "lint:src": "tslint tslint --config ./tslint.json \"src/**/*.ts?(x)\"",
     "lint:tests": "tslint \"test/**/*.ts?(x)\"",
     "prebuild": "rimraf build && tsc -p . --sourceMap",
-    "remove": "rimraf ./dist ./build ./coverage",
+    "remove": "rimraf ./dist ./dist-finale ./build ./coverage",
     "remove:dist": "rimraf ./dist",
     "remove:build": "rimraf ./build",
-    "serve": "nodemon ./dist/sikky.js",
-    "start": "npm-run-all npm run remove && npm run transpile && npm run tdd",
     "test": "npm-run-all test:browser test:node",
     "test:browser": "cross-env NODE_ENV=test karma start config/karma.config.js --no-auto-watch",
     "test:node": "cross-env NODE_ENV=test cross-env NODE_ENV=test npm run lint:tests && mocha -R spec --bail",
@@ -75,7 +73,7 @@
     "watch:build": "cross-env NODE_ENV=tdd cross-env NODE_ENV=debug tsc  -p . -w",
     "watch:browser": "cross-env NODE_ENV=tdd karma start config/karma.config.js -auto-watch --no-single-run",
     "watch:node": "cross-env NODE_ENV=tdd npm run lint:tests && mocha -R spec --bail --watch",
-    "tdd": "npm-run-all --parallel serve watch:build watch:node watch:browser"
+    "tdd": "npm-run-all --parallel watch:build watch:node watch:browser"
   },
   "devDependencies": {
     "@types/chai": "^3.4.22-alpha",
@@ -132,9 +130,7 @@
     "webpack-md5-hash": "0.0.5",
     "webpack-merge": "0.14.0"
   },
-  "dependencies": {
-    "nodemon": "^1.9.2"
-  },
+  "dependencies": {},
   "npmName": "sikky",
   "npmFileMap": [
     {

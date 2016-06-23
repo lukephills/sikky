@@ -1,5 +1,5 @@
 const webpack = require('webpack');
-const { resolve } = require('path')
+const path = require('path')
 const ForkCheckerPlugin = require('awesome-typescript-loader').ForkCheckerPlugin;
 
 module.exports = {
@@ -13,7 +13,7 @@ module.exports = {
     },
 	resolve: {
 		extensions: [ '', '.ts', '.tsx', '.js', '.jsx' ],
-		root: resolve('src/'),
+		root:  path.join(__dirname, 'src/'),
 		modulesDirectories: ['node_modules']
 	},
 	module: {
@@ -24,12 +24,12 @@ module.exports = {
 				loader: 'source-map-loader',
 				exclude: [
           // exclude the node dependencies
-          resolve('node_modules'),
+           path.join(__dirname, 'node_modules'),
           // and NPM packages that have problems with their sourcemaps
-					resolve('node_modules/rxjs'),
-					resolve('node_modules/@angular'),
-					resolve('node_modules/@ngrx'),
-					resolve('node_modules/@angular2-material'),
+					 path.join(__dirname, 'node_modules/rxjs'),
+					 path.join(__dirname, 'node_modules/@angular'),
+					 path.join(__dirname, 'node_modules/@ngrx'),
+					 path.join(__dirname, 'node_modules/@angular2-material'),
 				]
 			}
 		],

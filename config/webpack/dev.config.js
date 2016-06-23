@@ -1,6 +1,6 @@
 const webpack = require('webpack');
 const webpackMerge = require('webpack-merge');
-const { resolve } = require('path')
+const path = require('path')
 const commonConfig = require('./common.config.js');
 
 const environment = process.env.NODE_ENV = 'development';
@@ -10,7 +10,7 @@ module.exports = webpackMerge(commonConfig, {
 	debug: true,
 	devtool: 'inline-source-map',
 	output: {
-		path: resolve('dist/'),
+		path:  path.join(__dirname, 'dist/'),
 		publicPath: 'http://localhost:3000/',
 		filename: '[name].js',
 		chunkFilename: '[id].chunk.js',
@@ -31,7 +31,7 @@ module.exports = webpackMerge(commonConfig, {
 	devServer: {
 		historyApiFallback: true,
 		stats: 'minimal',
-		outputPath: resolve('dist'),
+		outputPath:  path.join(__dirname, 'dist'),
 		port: 3000,
 		// server host (localhost)
 		host: '0.0.0.0',

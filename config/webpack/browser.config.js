@@ -1,4 +1,4 @@
-const { resolve } = require('path')
+const path = require('path')
 const glob = require('glob');
 const webpack = require('webpack');
 
@@ -11,15 +11,15 @@ module.exports = {
 			{
 				test: /\.ts(x?)$/,
 				loader: 'tslint-loader',
-				exclude: [resolve('node_modules')]
+				exclude: [ path.join(__dirname, 'node_modules')]
 			},
 			{
 				test: /\.js$/,
 				loader: 'source-map-loader',
 				exclude: [
 					// these packages have problems with their sourcemaps
-					resolve('node_modules/rxjs'),
-					resolve('node_modules/@angular')
+					 path.join(__dirname, 'node_modules/rxjs'),
+					 path.join(__dirname, 'node_modules/@angular')
 				] }
 		],
 		loaders: [

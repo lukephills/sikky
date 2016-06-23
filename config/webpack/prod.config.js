@@ -1,6 +1,6 @@
 const webpack = require('webpack');
 const webpackMerge = require('webpack-merge');
-const { resolve } = require('path')
+const path = require('path')
 const commonConfig = require('./common.config.js');
 const WebpackMd5Hash = require('webpack-md5-hash');
 
@@ -10,8 +10,8 @@ module.exports = webpackMerge(commonConfig, {
     debug: false,
     devtool: 'source-map',
     output: {
-        path: resolve('dist'),
-        publicPath: resolve('/'),
+        path:  path.join(__dirname, 'dist'),
+        publicPath:  path.join(__dirname, '/'),
         filename: '[name].[chunkhash].js',
         sourceMapFilename: '[name].[chunkhash].map',
         chunkFilename: '[chunkhash].[id].chunk.js',

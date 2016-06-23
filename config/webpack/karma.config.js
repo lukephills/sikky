@@ -1,4 +1,4 @@
-const { resolve } = require('path')
+const path = require('path');
 
 module.exports = {
 	devtool: 'inline-source-map',
@@ -6,7 +6,7 @@ module.exports = {
 	verbose: true,
 	resolve: {
 		extensions: ['', '.ts', '.tsx', 'js'],
-		root: resolve('src')
+		root:  path.join(__dirname,'src')
 	},
 	module: {
 		preLoaders: [
@@ -14,15 +14,15 @@ module.exports = {
 				// load .ts and .tsx files
 				test: /\.tsx?$/,
 				loader: 'tslint-loader',
-				exclude: [resolve('node_modules')]
+				exclude: [ path.join(__dirname,'node_modules')]
 			},
 			{
 				test: /\.js$/,
 				loader: 'source-map-loader',
 				exclude: [
 					// these packages have problems with their sourcemaps
-					resolve('node_modules/rxjs'),
-					resolve('node_modules/@angular')
+					 path.join(__dirname,'node_modules/rxjs'),
+					 path.join(__dirname,'node_modules/@angular')
 				] }
 		],
 		loaders: [
@@ -35,7 +35,7 @@ module.exports = {
 		postLoaders: [
 			{
 				test: /\.(js|ts|tsx)$/, loader: 'istanbul-instrumenter-loader',
-				include: resolve('src/'),
+				include:  path.join(__dirname,'src/'),
 				exclude: [/node_modules/, /test/, /\.(e2e|browser|node)\.ts(x?)$/]
 			},
 
