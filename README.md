@@ -157,18 +157,17 @@ Sourcemap is supported for the coverage plugin.
 
 ## Server testing
 
-Server testing is done with `Mocha + Chai`. The server tests can be run from the command line - `npm run test:node` -, or
-within the `VSCode editor`
+Browser testing are done with `mocha+chai+sinon`. Debugging are enabled by default on `port 5858`.
 
 All server related tests are located inside the `test/node-tests folder`, and named with a node extension. E.g. `foo.node.ts`.
 
+You don't have to import testing framework related files such as `Chai`, `Sinon` etc. This have been done automatically.
+
 ## Browser testing
 
-Browser testing are done with `mocha + ts-node`. Debugging are enabled by default on `port 5858`.
+Browser testing are done with `Webpack` together with Karma as the test runner.
 
-All server related tests are located inside the `test/browser-tests folder`, and named with a node extension. E.g. `foo.browser.ts`.
-
-You don't have to import testing framework related files such as `Chai`, `Sinon` etc. This have been done automatically.
+All server related tests are located inside the test/browser-tests folder, and named with a node extension. E.g. `foo.browser.ts`.
 
 ## Direct browser testing
 
