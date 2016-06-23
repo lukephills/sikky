@@ -29,8 +29,6 @@
 - Babel added for testing purpose
 - `npm run test` task now runs in paralell and excute both browser and node tests
 
-*more to be added...*
-
 # v.0.11.2
 
 - updated NPM packages
