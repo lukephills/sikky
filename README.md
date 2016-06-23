@@ -86,10 +86,9 @@ npm run build:prod
 
 Everything is done with `Webpack`. When you are satisfied and ready to ship the code to production, you can make a nice, clean output with `Rollup`.
 
-`npm run build:finale` bundle the `finale build` files with Rollup ready for shipping. This files are put inside a sub-folder named *finale* inside
-the *dist* folder.
+`npm run build:finale` bundle the `finale build` files with Rollup, and make them ready for shipping. This files are put inside it's own folder `dist-finale`.
 
-**Note!** A `finale` build shaves off around 3 - 4 KB from the source code bundled with `Webpack`. Less bytes - more happy customers!!
+A `finale` build shaves off around 4 - 5 KB from the bundled source, compared to `Webpack`. Less bytes - more happy customers!!
 
 ## Visual Studio Code
 
@@ -142,7 +141,6 @@ The watch task inform you if something is wrong with your code, and can come up 
 src/universal/foo.ts(7,10): error TS2348: Value of type 'typeof TeaSpoon' is not callable.
 Did you mean to include 'new'?
 ```
-
 ## Continuous integration (CI)
 
 Travis, Circle and Appveyor are the only supported CI. Travis is setup to work with Linux and OSX. Appveyor only runs in a Windows environment, but are configured to run on both the x86 and x64 platform.

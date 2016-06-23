@@ -21,14 +21,14 @@ export default {
   ],
   targets: [
     {
-      dest: path.resolve('dist/finale/' + pkg.name + '.js'),
+      dest: path.resolve('dist-finale/' + pkg.name + '.js'),
       format: 'umd',
       moduleName: pkg.name,
       sourceMap: false
     },
     // ES Modules
     {
-      dest: path.resolve('dist/finale/' + pkg.name + '.es'),
+      dest: path.resolve('dist-finale/' + pkg.name + '.es'),
       format: 'es',
       sourceMap: false
     },

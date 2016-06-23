@@ -2,6 +2,8 @@
 
 - ignore imported style files when running in Node
 - added JSDom for node tests
+- refactored Webpack configuration
+- changed finale dist folder path
 
 # v.1.0.2
 
