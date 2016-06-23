@@ -1,3 +1,7 @@
+# v.1.0.2
+
+- refactored server testing. `ts-node + mocha` by default.Debuggin enabled by default. Open port `5858`.
+
 # v.1.0.1
 
 - bug fixes
@@ -11,14 +15,14 @@
 - improved sourcemap support
 - added nodemon support
 - paralell processing
-- added a new TDD task. This task run all test and build in parallel 
+- added a new TDD task. This task run all test and build in parallel
 - more options for TypeScript transpiling
-- refactored how node tests are working. 
+- refactored how node tests are working.
 - added code coverage for node tests
 - improved code coverage for browser tests ( *karma test runner*)
 - Webpack used for browser tests
 - Webpack used for node tests
-- improved linting. 
+- improved linting.
 - many tasks now runs in parallel (*parallel processing*)
 - improved environment variabel support
 - improved VSCode integration

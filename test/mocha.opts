@@ -1,0 +1,6 @@
+test/**/*.node.ts
+--recursive
+--require ./config/mocha.config.js
+--require ts-node/register
+--colors
+--debug

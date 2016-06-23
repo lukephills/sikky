@@ -8,7 +8,7 @@
 [![npm downloads](https://img.shields.io/npm/dm/sikky.svg)](https://www.npmjs.org/package/sikky)
 [![npm](https://img.shields.io/npm/l/express.svg?style=flat-square)](https://github.com/kflash/sikky/blob/master/LICENSE.md)
 
-A TypeScript 2.0 starter kit using all the latest technology, included the latest available 
+A TypeScript 2.0 starter kit using all the latest technology, included the latest available
 TypeScript version - version 2.0 Pre (*nightly build*).
 
 ## Features
@@ -43,7 +43,7 @@ TypeScript version - version 2.0 Pre (*nightly build*).
 
 ## Quick start
 
-The only development dependency of this project is [Node.js](https://nodejs.org/en/). So just make sure you have it installed. 
+The only development dependency of this project is [Node.js](https://nodejs.org/en/). So just make sure you have it installed.
 Then type few commands known to every Node developer...
 
 ```bash
@@ -95,12 +95,12 @@ the *dist* folder.
 
 This workflow is tightly integrated with `VSCode`. In fact you can do everything from the editor.
 
-Start the VSCode editor, and press **Ctrl+Shift+B** to compile the project. A build folder appers with the transpiled files in it. 
+Start the VSCode editor, and press **Ctrl+Shift+B** to compile the project. A build folder appers with the transpiled files in it.
 
 To stop the compilation, press **Ctrl+P → > Tasks: Terminate Running Task**.
 
-If you want to debug the source code, set a **breakpoint** on line 6 in /test/browser-tests/sikky.browser.js. 
-Then press **Cmd + D** to view debugging options. 
+If you want to debug the source code, set a **breakpoint** on line 6 in /test/browser-tests/sikky.browser.js.
+Then press **Cmd + D** to view debugging options.
 
 Select `Debug Current TypeScript Test` from the dropdown and press **F5** to launch the debugger.
 
@@ -108,19 +108,19 @@ You should hit the breakpoint. Now you can press **F11** to step into function, 
 
 **Note!** Debugging may randomly return warning on build. [See](https://github.com/Microsoft/vscode/issues/4070).
 
-Unit tests can be run by pressin **Cmd + T**. You should see results displayed in the **Output window**. 
+Unit tests can be run by pressin **Cmd + T**. You should see results displayed in the **Output window**.
 
 Both browser and server tests are set up to run at the same time in parallel.
 
 ## Custom Type Definitions
 
-When including 3rd party modules you also need to include the type definition for the module if they don't provide one within the module. 
+When including 3rd party modules you also need to include the type definition for the module if they don't provide one within the module.
 From TypeScript 2.0 both `TDD` and `Typings` are *deprecated*. All definitions are now installed through `NPM packages`.
- 
+
  ```js
- npm install @types/<package name>`. 
+ npm install @types/<package name>`.
  ```
- 
+
 You can read more about it  [here](https://github.com/Microsoft/TypeScript/issues/9184)
 
 ## Test-driven development (TDD)
@@ -157,21 +157,23 @@ Sourcemap is supported for the coverage plugin.
 
 ## Server testing
 
-Server testing is done with `Mocha + Chai`. The server tests can be run from the command line - `npm run test:node` -, or 
+Server testing is done with `Mocha + Chai`. The server tests can be run from the command line - `npm run test:node` -, or
 within the `VSCode editor`
 
 All server related tests are located inside the `test/node-tests folder`, and named with a node extension. E.g. `foo.node.ts`.
 
 ## Browser testing
 
-Browser testing are done with `Webpack` together with Karma as the test runner. 
+Browser testing are done with `mocha + ts-node`. Debugging are enabled by default on `port 5858`.
 
 All server related tests are located inside the `test/browser-tests folder`, and named with a node extension. E.g. `foo.browser.ts`.
 
+You don't have to import testing framework related files such as `Chai`, `Sinon` etc. This have been done automatically.
+
 ## Direct browser testing
 
-The browser spec runner - `./config/runner.html` - can be opened in a browser to run your tests. For it to work, you must 
-first run `npm run browser`, and open `port 8080` in your browser. 
+The browser spec runner - `./config/runner.html` - can be opened in a browser to run your tests. For it to work, you must
+first run `npm run browser`, and open `port 8080` in your browser.
 
 This will set up a watch task that will automatically refresh the tests when your scripts, or the tests, change.
 
