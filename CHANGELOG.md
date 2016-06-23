@@ -1,3 +1,10 @@
+# v.1.0.4
+
+- fixed issues with TSLint
+- karma refactoring
+- updated NPM packages
+- cleanup
+
 # v.1.0.3
 
 - ignore imported style files when running in Node
