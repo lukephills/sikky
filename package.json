@@ -80,7 +80,7 @@
     "@types/mocha": "^2.2.21-alpha",
     "@types/sinon": "^1.16.20-alpha",
     "@types/sinon-chai": "^2.7.20-alpha",
-    "awesome-typescript-loader": "^2.0.0-rc.12",
+    "awesome-typescript-loader": "^1.1.1",
     "babel-cli": "^6.10.1",
     "babel-core": "^6.10.4",
     "babel-loader": "^6.2.4",
