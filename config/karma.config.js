@@ -1,4 +1,4 @@
-const webpackConfig  = require('./webpack/webpack.karma.config');
+const webpackConfig  = require('./webpack/karma.config');
 const isCI = process.env.CONTINUOUS_INTEGRATION === 'true';
 
 module.exports = function (config) {
