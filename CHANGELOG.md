@@ -1,8 +1,3 @@
-# v.1.0.8
-
-- fixed Karma issues
-- fixed CI issue
-
 # v.1.0.5
 
 - fixed coverage report issue
