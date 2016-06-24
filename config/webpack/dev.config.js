@@ -7,7 +7,7 @@ const environment = process.env.NODE_ENV = 'development';
 
 module.exports = webpackMerge(commonConfig, {
 	debug: true,
-	devtool: 'inline-source-map',
+	devtool: 'cheap-eval-source-map',
 	output: {
 		path: path.resolve('dist'),
     filename: '[name].js',

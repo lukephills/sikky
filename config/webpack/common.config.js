@@ -17,26 +17,8 @@ module.exports = {
 		modulesDirectories: ['node_modules']
 	},
 	module: {
-		preLoaders: [
-			{
-				test: /\.js$/,
-				loader: 'source-map-loader',
-				exclude: [
-					// these packages have problems with their sourcemaps
-					path.resolve('node_modules/rxjs'),
-					path.resolve('node_modules/@angular'),
-					path.resolve('node_modules/@ngrx'),
-					path.resolve('node_modules/@angular2-material'),
-        	]
-			}
-		],
-		loaders: [
-			{
-        // load .ts and .tsx files
-				test: /\.tsx?$/,
-				loader: 'babel-loader!awesome-typescript-loader',
-				exclude: [/\.(browser|node|e2e)\.ts$/]
-			}
+		preLoaders: [ { test: /\.js$/, loader: 'source-map-loader', exclude: [] } ],
+		loaders: [ {	test: /\.tsx?$/, loader: 'babel-loader!awesome-typescript-loader', exclude: [/\.(browser|node|e2e)\.ts$/] }
 		],
 		plugins: [
       // add all common plugins here
