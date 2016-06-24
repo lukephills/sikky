@@ -11,6 +11,8 @@
 A TypeScript 2.0 starter kit using all the latest technology, included the latest available
 TypeScript version - version 2.0 Pre (*nightly build*).
 
+**Webpack 2.0 soon to be merged into this!**
+
 ## Features
 
 - [x] Statically typed build system for working with [Typescript](https://www.typescriptlang.org/) 2.0 Pre
