@@ -9,12 +9,10 @@ module.exports = webpackMerge(commonConfig, {
 	debug: true,
 	devtool: 'inline-source-map',
 	output: {
-		filename: '[name].js',
-		chunkFilename: '[id].chunk.js',
-		libraryTarget: 'umd',
-		path:  path.join(__dirname, 'dist/'),
-		publicPath: 'http://localhost:3000/',
-		sourceMapFilename: '[name].map'
+		path: path.resolve('dist'),
+    filename: '[name].js',
+    sourceMapFilename: '[name].map',
+    chunkFilename: '[id].chunk.js'
 	},
 	plugins: [
 		// set environment global variable used in the js code
@@ -30,7 +28,7 @@ module.exports = webpackMerge(commonConfig, {
 	devServer: {
 		historyApiFallback: true,
 		stats: 'minimal',
-		outputPath:  path.join(__dirname, 'dist'),
+		outputPath: path.resolve('dist'),
 		port: 3000,
 		// server host (localhost)
 		host: '0.0.0.0',
