@@ -10,7 +10,6 @@ module.exports = webpackMerge(commonConfig, {
 	devtool: 'inline-source-map',
 	output: {
 		path: path.resolve('dist'),
-    publicPath: 'http://localhost:9045/',
     filename: '[name].js',
     chunkFilename: '[id].chunk.js',
     sourceMapFilename: '[name].map'
@@ -25,17 +24,5 @@ module.exports = webpackMerge(commonConfig, {
 		emitErrors: false,
 		failOnHint: false,
 		resourcePath: 'src'
-	},
-	devServer: {
-		historyApiFallback: true,
-		stats: 'minimal',
-		outputPath: path.resolve('dist'),
-		port: 3000,
-		// server host (localhost)
-		host: '0.0.0.0',
-		watchOptions: {
-			aggregateTimeout: 300,
-			poll: 1000
-		}
 	}
 });
