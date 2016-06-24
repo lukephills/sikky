@@ -16,7 +16,6 @@ module.exports = webpackMerge(commonConfig, {
 
 	},
 	plugins: [
-		new WebpackMd5Hash(),
 		// avoid code duplication that may happen when several modules require the same module for instance
 		new webpack.optimize.DedupePlugin(),
 		// set environment global variable used in the js code
