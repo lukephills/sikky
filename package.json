@@ -1,6 +1,6 @@
 {
   "name": "sikky",
-  "version": "1.0.7",
+  "version": "1.0.9",
   "description": "A ultimate TypeScript 2.0 boilerplate for node and the browser",
   "main": "dist/sikky.js",
   "module": "dist/finale/sikky.mjs",
@@ -55,8 +55,8 @@
   "scripts": {
     "browser": "webpack-dev-server --quiet --config ./config/webpack/browser.config.js",
     "build": "npm-run-all build:dev build:prod",
-    "build:dev": "cross-env NODE_ENV=development webpack --config config/webpack/dev.config.js --progress --profile --display-error-details --display-cached",
-    "build:prod": "cross-env NODE_ENV=production webpack --config config/webpack/prod.config.js --progress --profile --display-error-details --display-cached",
+    "build:dev": "cross-env NODE_ENV=development webpack --config config/webpack/dev.config.js --progress --profile --colors --display-error-details --display-cached",
+    "build:prod": "cross-env NODE_ENV=production webpack --config config/webpack/prod.config.js --progress --profile --colors --display-error-details --display-cached",
     "build:finale": "npm run lint:src && npm run transpile && npm run build:finale:dev && npm run build:finale:prod",
     "build:finale:dev": "cross-env NODE_ENV=development rollup -c ./config/rollup/rollup.dev.config.js",
     "build:finale:prod": "cross-env NODE_ENV=development npm run lint:src && rollup -c ./config/rollup/rollup.prod.config.js",
