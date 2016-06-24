@@ -5,11 +5,15 @@ module.exports = function (config) {
 
 	const configuration = {
 
-		basePath: '..',
-		files: [ { pattern: './test/main.js', watched: false } ],
-		preprocessors: { './test/main.js': ['coverage', 'webpack', 'sourcemap'] },
+		basePath: '../',
+		urlRoot: '/karma/',
+		files: [ { pattern: 'test/main.js', watched: false } ],
+		preprocessors: { 'test/main.js': ['coverage', 'webpack', 'sourcemap'] },
 		frameworks: ['mocha', 'chai', 'sinon', 'source-map-support'],
-		client: { args: ['--grep', config.grep || ''] },
+		client: {
+			args: ['--grep', config.grep || ''],
+			useIframe: false
+		},
 		excluded: [],
 		webpack: webpackConfig,
 		coverageReporter: {

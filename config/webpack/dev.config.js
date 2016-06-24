@@ -6,16 +6,15 @@ const commonConfig = require('./common.config.js');
 const environment = process.env.NODE_ENV = 'development';
 
 module.exports = webpackMerge(commonConfig, {
-
 	debug: true,
 	devtool: 'inline-source-map',
 	output: {
-		path:  path.join(__dirname, 'dist/'),
-		publicPath: 'http://localhost:3000/',
 		filename: '[name].js',
 		chunkFilename: '[id].chunk.js',
+		libraryTarget: 'umd',
+		path:  path.join(__dirname, 'dist/'),
+		publicPath: 'http://localhost:3000/',
 		sourceMapFilename: '[name].map'
-
 	},
 	plugins: [
 		// set environment global variable used in the js code

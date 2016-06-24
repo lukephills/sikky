@@ -37,8 +37,7 @@ module.exports = {
 				test: /\.(js|ts|tsx)$/, loader: 'istanbul-instrumenter-loader',
 				include: resolve('src/'),
 				exclude: [/node_modules/, /test/, /\.(e2e|browser|node)\.ts(x?)$/]
-			},
-
+			}
 		]
 	},
 	plugins: [],
