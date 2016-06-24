@@ -3,16 +3,9 @@ const path = require('path');
 const ForkCheckerPlugin = require('awesome-typescript-loader').ForkCheckerPlugin;
 
 module.exports = {
-
-	 metadata: {
-        title: 'Sikky',
-        baseUrl: '/'
-    },
-	entry: {
-       'sikky': './src/sikky.ts'
-    },
+	entry: { 'sikky': './src/sikky.ts' },
 	resolve: {
-		extensions: ['', '.ts', '.tsx', '.js', '.json'],
+		extensions: ['', '.ts', '.tsx', '.js'],
 		root: path.resolve('src/'),
 		modulesDirectories: ['node_modules']
 	},

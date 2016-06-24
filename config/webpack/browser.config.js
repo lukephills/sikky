@@ -8,27 +8,12 @@ module.exports = {
 	output: { filename: '__spec-build.js' },
 	module: {
 		preLoaders: [
-			{
-				test: /\.ts(x?)$/,
-				loader: 'tslint-loader',
-				exclude: [ path.resolve('node_modules')]
-			},
-			{
-				test: /\.js$/,
-				loader: 'source-map-loader',
-				exclude: [
-					// these packages have problems with their sourcemaps
-					 path.resolve('node_modules/rxjs'),
-					 path.resolve('node_modules/@angular')
-				] }
+			{ test: /\.tsx?$/, loader: 'tslint-loader', exclude: [ path.resolve('node_modules')] },
+			{ test: /\.js$/, loader: 'source-map-loader', exclude: [] }
 		],
 		loaders: [
-			{
-				test: /\.ts(x?)$/,
-				loader: 'babel-loader!awesome-typescript-loader',
-				exclude:  [/\.(spec|e2e|async)\.ts$/]
-			}
-		]
+      { test: /\.tsx?$/, loader: 'babel-loader!awesome-typescript-loader', exclude:  [/\.(spec|e2e|async)\.ts$/] }
+    ]
 	},
 	devServer: {
 		contentBase: './',
@@ -47,9 +32,7 @@ module.exports = {
 	plugins: [
 		// By default, webpack does `n=>n` compilation with entry files. This concatenates
 		// them into a single chunk.
-		new webpack.optimize.LimitChunkCountPlugin({
-			maxChunks: 1
-		}),
+		new webpack.optimize.LimitChunkCountPlugin({ maxChunks: 1 }),
 		new webpack.HotModuleReplacementPlugin()
 	]
 }

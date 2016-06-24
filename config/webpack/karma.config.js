@@ -10,27 +10,10 @@ module.exports = {
 	},
 	module: {
 		preLoaders: [
-			{
-				// load .ts and .tsx files
-				test: /\.tsx?$/,
-				loader: 'tslint-loader',
-				exclude: [resolve('node_modules')]
-			},
-			{
-				test: /\.js$/,
-				loader: 'source-map-loader',
-				exclude: [
-					// these packages have problems with their sourcemaps
-					resolve('node_modules/rxjs'),
-					resolve('node_modules/@angular')
-				] }
+			{	test: /\.tsx?$/, loader: 'tslint-loader', exclude: [resolve('node_modules')] },
+			{	test: /\.js$/, loader: 'source-map-loader',	exclude: [] }
 		],
-		loaders: [
-			{
-			 // load .ts and .tsx files
-			 test: /\.tsx?$/,
-			 loader: 'babel-loader!awesome-typescript-loader'
-			}
+		loaders: [ { test: /\.tsx?$/, loader: 'babel-loader!awesome-typescript-loader' }
 		],
 		postLoaders: [
 			{
@@ -48,7 +31,7 @@ module.exports = {
 	},
 	node: {
 		global: 'window',
-		process: false,
+		crypto: 'empty',
 		module: false,
 		clearImmediate: false,
 		setImmediate: false
