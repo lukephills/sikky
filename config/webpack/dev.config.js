@@ -10,9 +10,10 @@ module.exports = webpackMerge(commonConfig, {
 	devtool: 'inline-source-map',
 	output: {
 		path: path.resolve('dist'),
+    publicPath: 'http://localhost:9045/',
     filename: '[name].js',
-    sourceMapFilename: '[name].map',
-    chunkFilename: '[id].chunk.js'
+    chunkFilename: '[id].chunk.js',
+    sourceMapFilename: '[name].map'
 	},
 	plugins: [
 		// set environment global variable used in the js code

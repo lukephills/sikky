@@ -2,7 +2,6 @@ const webpack = require('webpack');
 const webpackMerge = require('webpack-merge');
 const path = require('path')
 const commonConfig = require('./common.config.js');
-const WebpackMd5Hash = require('webpack-md5-hash');
 
 const environment = process.env.NODE_ENV = 'production';
 
@@ -11,9 +10,10 @@ module.exports = webpackMerge(commonConfig, {
 	devtool: 'source-map',
 	output: {
 		path: path.resolve('dist/'),
-		filename: '[name].[chunkhash].js',
-		sourceMapFilename: '[name].[chunkhash].map',
-		chunkFilename: '[chunkhash].[id].chunk.js',
+		filename: '[name].[hash].js',
+		chunkFilename: '[id].[hash].chunk.js',
+    sourceMapFilename: '[name].map'
+
 	},
 	plugins: [
 		new WebpackMd5Hash(),

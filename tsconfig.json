@@ -1,7 +1,4 @@
 {
-	"buildOnSave": false,
-	"compileOnSave": true,
-
 	"compilerOptions": {
 	"allowJs": false,
 	"allowUnreachableCode": false,
@@ -34,7 +31,10 @@
     "node_modules"
   ],
   "awesomeTypescriptLoaderOptions": {
-    "resolveGlobs": true,
-    "forkChecker": true
-  }
+    "forkChecker": true,
+    "resolveGlobs": true
+  },
+  "compileOnSave": false,
+  "buildOnSave": false,
+  "atom": { "rewriteTsconfig": false }
 }
