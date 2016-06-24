@@ -1,6 +1,6 @@
 {
   "name": "sikky",
-  "version": "1.0.9",
+  "version": "1.0.11",
   "description": "A ultimate TypeScript 2.0 boilerplate for node and the browser",
   "main": "dist/sikky.js",
   "module": "dist/finale/sikky.mjs",
@@ -131,13 +131,13 @@
     "tslint": "3.11.0",
     "tslint-loader": "^2.1.5",
     "typescript": "next",
-    "webpack": "2.1.0-beta.14",
-    "webpack-dev-server": "1.14.1",
-    "webpack-md5-hash": "0.0.5",
-    "webpack-merge": "0.14.0"
+    "webpack": "^1.13.1",
+    "webpack-dev-server": "^1.14.1",
+    "webpack-md5-hash": "^0.0.5",
+    "webpack-merge": "^0.14.0"
   },
   "dependencies": {
-    "@types/node": "4.0.22-alpha"
+    "@types/node": "^4.0.22-alpha"
   },
   "npmName": "sikky",
   "npmFileMap": [

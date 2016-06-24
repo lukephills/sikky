@@ -40,12 +40,5 @@ module.exports = webpackMerge(commonConfig, {
 		emitErrors: true,
 		failOnHint: true,
 		resourcePath: 'src'
-	}, node: {
-		global: 'window',
-		crypto: 'empty',
-		process: false,
-		module: false,
-		clearImmediate: false,
-		setImmediate: false
 	}
 });

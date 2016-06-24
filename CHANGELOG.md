@@ -1,3 +1,8 @@
+# v. 1.0.11
+
+- fixed issues with Webpack and sourcemaps
+- downgraded Webpack from v. 2.0 Beta to 1.13.1
+
 # v.1.0.5
 
 - fixed coverage report issue
