@@ -2,7 +2,6 @@ const webpack = require('webpack');
 const webpackMerge = require('webpack-merge');
 const path = require('path')
 const commonConfig = require('./common.config.js');
-const BundleTracker = require('webpack-bundle-tracker');
 const environment = process.env.NODE_ENV = 'production';
 
 module.exports = webpackMerge(commonConfig, {
@@ -16,7 +15,6 @@ module.exports = webpackMerge(commonConfig, {
 
 	},
 	plugins: [
-    new BundleTracker({filename: './webpack-stats-production.json'}),
     // pass options to uglify
     new webpack.LoaderOptionsPlugin({
         minimize: true,
