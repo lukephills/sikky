@@ -6,7 +6,7 @@ sudo: required
 dist: trusty
 node_js:
   - "stable"
-  - "5"
+ # - "5"
 
 matrix:
   fast_finish: true
