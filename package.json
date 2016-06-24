@@ -8,6 +8,7 @@
   "author": "KFlash",
   "homepage": "https://github.com/kflash/sikky",
   "license": "MIT",
+  "engineStrict": true,
   "engines": {
     "node": ">= 5.4.1 < 6"
   },
@@ -33,6 +34,8 @@
     "TypeScript",
     "microsoft",
     "ios",
+    "isomorphic",
+    "hot reload",
     "android",
     "travis",
     "circle",
@@ -63,7 +66,7 @@
     "lint:tests": "tslint \"test/**/*.ts?(x)\"",
     "preinstall": "npm cache clean",
     "prebuild": "rimraf ./build && tsc -p . --sourceMap",
-    "remove": "rimraf ./dist ./dist-finale ./build ./coverage",
+    "cleanup": "rimraf ./dist ./dist-finale ./build ./coverage",
     "remove:dist": "rimraf ./dist",
     "remove:build": "rimraf ./build",
     "test": "npm-run-all test:browser test:node",
@@ -71,6 +74,7 @@
     "test:node": "cross-env NODE_ENV=test npm run lint:tests && mocha -R spec --bail",
     "transpile": "rimraf build && tsc -p .",
     "transpile:sourcemap": "rimraf build && tsc --outDir build -t es5 --m umd --sourceMap",
+    "update:dependencies": "ncu -u",
     "watch:build": "cross-env NODE_ENV=tdd tsc  -p . -w",
     "watch:browser": "cross-env NODE_ENV=tdd karma start config/karma.config.js -auto-watch --no-single-run",
     "watch:node": "cross-env NODE_ENV=tdd npm run lint:tests && mocha -R spec --bail --watch",
@@ -110,6 +114,7 @@
     "karma-webpack": "1.7.0",
     "mocha": "^2.5.3",
     "mocha-lcov-reporter": "^1.2.0",
+    "npm-check-updates": "2.6.7",
     "npm-run-all": "^2.2.2",
     "rimraf": "^2.5.2",
     "rollup": "^0.32.4",
@@ -131,7 +136,9 @@
     "webpack-md5-hash": "0.0.5",
     "webpack-merge": "0.14.0"
   },
-  "dependencies": {},
+  "dependencies": {
+    "@types/node": "4.0.22-alpha"
+  },
   "npmName": "sikky",
   "npmFileMap": [
     {

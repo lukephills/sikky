@@ -68,7 +68,7 @@ npm run build:prod
 * `npm run build:finale:prod` - transpile down to ES5 and builds a bundle for production with Rollup and `Bublé`
 * `npm run build:finale:prod` - transpile down to ES5 and builds a bundle for production with Rollup and `Bublé`
 * `npm run debug` - debug task used with the `VSCode editor`.
-* `npm run remove` - remove the dist, coverage and build folders
+* `npm run cleanup` - remove the dist, coverage and build folders
 * `npm run remove:build` - remove the build folder
 * `npm run remove:dist` - removed the dist folder
 * `npm run lint` - validates everything
@@ -81,6 +81,8 @@ npm run build:prod
 * `npm run watch:build` - watch your TypeScript files and trigger recompilation on changes.
 * `npm run watch:node` - run all unit tests and watch files for changes in the `node.js` environment.
 * `npm run tdd` - run all watch tasks in parallel and watch files for changes.
+* `update:dependencies` - update npm packages
+
 
 ## Build workflow
 
