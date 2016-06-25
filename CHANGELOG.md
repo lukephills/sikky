@@ -1,4 +1,8 @@
-# v. 1.0.11
+# v. 1.1.2
+
+- updated NPM packages
+
+# v. 1.1.1
 
 - fixed issues with Webpack and sourcemaps
 - downgraded Webpack from v. 2.0 Beta to 1.13.1
