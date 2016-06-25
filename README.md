@@ -153,9 +153,9 @@ You will need to change permissons on the .sh files used by Travis.
 
 ## Code coverage
 
-The library is set up to integrate with [`Coveralls.io`](https://coveralls.io/), and are using [`Istanbul`](https://github.com/gotwarlost/istanbul) and the
-[`rollup-plugin-coverage`](https://gitlab.com/kflash/rollup-plugin-coverage) plugin to generate coverage report.
-Sourcemap is supported for the coverage plugin.
+The library is set up to integrate with [`Coveralls.io`](https://coveralls.io/), and are using [`Istanbul`](https://github.com/gotwarlost/istanbul) and Karma + Webpack to generate coverage report.
+
+Coverage report for server tests will be included soon as I find it stable enough.
 
 ## Server testing
 
