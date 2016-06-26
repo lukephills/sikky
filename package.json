@@ -101,7 +101,7 @@
     "ignore-styles": "^4.0.0",
     "istanbul-instrumenter-loader": "^0.2.0",
     "jsdom": "^9.3.0",
-    "karma": "^1.0.0",
+    "karma": "^1.1.0",
     "karma-chai": "0.1.0",
     "karma-chrome-launcher": "^1.0.1",
     "karma-cli": "1.0.1",
