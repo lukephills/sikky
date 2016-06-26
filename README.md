@@ -11,7 +11,7 @@
 A TypeScript 2.0 starter kit using all the latest technology, included the latest available
 TypeScript version - version 2.0 Pre (*nightly build*).
 
-**INFO!** If you need a super fast, and lightweight TypeScript boilerplate that export a single file, [click here](https://github.com/jeibo/workflow). 
+If this boilerplate are too complex,a and you need a super fast, and lightweight TypeScript boilerplate that export a single file, [click here](https://github.com/Kflash/rachelle). 
 
 ## Features
 
