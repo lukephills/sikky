@@ -17,9 +17,9 @@ module.exports = webpackMerge(commonConfig, {
 	},
 	plugins: [
     new HtmlWebpackPlugin({
-          hash: true,
-          template: 'index.html',
-      }),
+        hash: true,
+        template: 'index.html',
+    }),
     // pass options to uglify
     new webpack.LoaderOptionsPlugin({
         minimize: true,
