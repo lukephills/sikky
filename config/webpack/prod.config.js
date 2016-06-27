@@ -3,6 +3,7 @@ const webpackMerge = require('webpack-merge');
 const path = require('path')
 const commonConfig = require('./common.config.js');
 const environment = process.env.NODE_ENV = 'production';
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = webpackMerge(commonConfig, {
 	debug: false,
@@ -15,6 +16,10 @@ module.exports = webpackMerge(commonConfig, {
 
 	},
 	plugins: [
+    new HtmlWebpackPlugin({
+          hash: true,
+          template: 'index.html',
+      }),
     // pass options to uglify
     new webpack.LoaderOptionsPlugin({
         minimize: true,

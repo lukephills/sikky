@@ -1,6 +1,7 @@
 const webpack = require('webpack');
 const path = require('path');
 const ForkCheckerPlugin = require('awesome-typescript-loader').ForkCheckerPlugin;
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
 	entry: { 'sikky': './src/sikky.ts' },
@@ -16,11 +17,16 @@ module.exports = {
 		plugins: [
       // add all common plugins here
 			new ForkCheckerPlugin(),
+      new HtmlWebpackPlugin({
+          hash: true,
+          filename: 'index.html',
+          template: __dirname + '/index.html',
+      }),
       // Promise and fetch polyfills
       new webpack.ProvidePlugin({
-      Promise: 'imports?this=>global!exports?global.Promise!es6-promise',
-      fetch: 'imports?this=>global!exports?global.fetch!whatwg-fetch',
-    })
+        Promise: 'imports?this=>global!exports?global.Promise!es6-promise',
+        fetch: 'imports?this=>global!exports?global.fetch!whatwg-fetch',
+      })
 		]
 	},
 	node: {

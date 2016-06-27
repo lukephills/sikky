@@ -98,6 +98,7 @@
     "cross-env": "^1.0.8",
     "es6-promise": "^3.2.1",
     "glob": "^7.0.5",
+    "html-webpack-plugin": "^2.21.0",
     "ignore-styles": "^4.0.0",
     "istanbul-instrumenter-loader": "^0.2.0",
     "jsdom": "^9.3.0",
