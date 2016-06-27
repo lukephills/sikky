@@ -347,7 +347,7 @@ __
 ## v.0.1.21
 
 - refactoried how unit testing works
-- uses npn@types by default
+- uses npm@types by default
 
 ## v.0.1.20
 

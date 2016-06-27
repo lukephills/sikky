@@ -69,6 +69,7 @@
     "cleanup": "rimraf ./dist ./dist-finale ./build ./coverage",
     "remove:dist": "rimraf ./dist",
     "remove:build": "rimraf ./build",
+    "start": "webpack-dev-server --config ./config/webpack/dev.config.js --hot --inline --watch --port 3000",
     "test": "npm-run-all test:browser test:node",
     "test:browser": "cross-env NODE_ENV=test karma start config/karma.config.js --no-auto-watch",
     "test:node": "cross-env NODE_ENV=test npm run lint:tests && mocha -R spec --bail",
