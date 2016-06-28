@@ -11,7 +11,7 @@
 A TypeScript 2.0 starter kit using all the latest technology, included the latest available
 TypeScript version - version 2.0 Pre (*nightly build*).
 
-If this boilerplate are too complex,a and you need a super fast, and lightweight TypeScript boilerplate that export a single file, [click here](https://github.com/Kflash/rachelle). 
+If this boilerplate are too complex,a and you need a super fast, and lightweight TypeScript boilerplate that export a single file, [click here](https://github.com/Kflash/rachelle).
 
 ## Features
 
@@ -63,6 +63,7 @@ npm run build:prod
 
 ## Workflow
 
+* `npm start` - runs a web server on localhost:3000 and updates on changes using HMR
 * `npm run build` - transpile down to ES5 and builds a bundle both for development and production
 * `npm run build:dev` - transpile down to ES5 and builds a bundle for development
 * `npm run build:prod` - transpile down to ES5 and builds a bundle for production

@@ -1,3 +1,8 @@
+# v. 1.13
+- updated webpack-dev-server
+- npm start script to serve index.html and watch for changes with HMR
+- HTMLWebpackPlugin to inject script files into index.html for build
+
 # v. 1.1.2
 
 - updated NPM packages

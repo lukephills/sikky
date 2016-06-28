@@ -1,6 +1,6 @@
 {
   "name": "sikky",
-  "version": "1.1.3",
+  "version": "1.1.4",
   "description": "A ultimate TypeScript 2.0 boilerplate for node and the browser",
   "main": "dist/sikky.js",
   "module": "dist/finale/sikky.mjs",
