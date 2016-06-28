@@ -1,4 +1,4 @@
-# Sikky.js test suite
+# Sikky test suite
 
 ## Running the tests
 

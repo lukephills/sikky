@@ -3,7 +3,7 @@ const path = require('path');
 const ForkCheckerPlugin = require('awesome-typescript-loader').ForkCheckerPlugin;
 
 module.exports = {
-	entry: { 'sikky': './src/sikky.ts' },
+	entry: { 'app': './src/app.ts' },
 	resolve: {
 		extensions: ['', '.ts', '.tsx', '.js'],
 		root: path.resolve('src/'),

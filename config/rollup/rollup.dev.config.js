@@ -5,7 +5,7 @@ import commonjs from 'rollup-plugin-commonjs';
 const pkg = require('../../package.json');
 
 export default {
-  entry: path.resolve('build/src/sikky.js'),
+  entry: path.resolve('build/src/app.js'),
   useStrict: false,
   banner:
 	'/**\n' +

@@ -7,7 +7,7 @@ import strip from 'rollup-plugin-strip';
 const pkg = require('../../package.json');
 
 export default {
-  entry: path.resolve('build/src/sikky.js'),
+  entry: path.resolve('build/src/app.js'),
   plugins: [
   uglify({
 			warnings: false,
