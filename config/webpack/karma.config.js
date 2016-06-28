@@ -1,4 +1,4 @@
-const { resolve } = require('path')
+const resolve = require('path').resolve;
 
 module.exports = {
 	devtool: 'inline-source-map',
