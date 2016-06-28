@@ -3,7 +3,7 @@
   "version": "1.1.4",
   "description": "A ultimate TypeScript 2.0 boilerplate for node and the browser",
   "main": "dist/app.js",
-  "module": "dist/finale/app.mjs",
+  "module": "dist/finale/sikky.mjs",
   "modules.root": "build/src",
   "author": "KFlash",
   "homepage": "https://github.com/kflash/sikky",
@@ -53,7 +53,7 @@
     "dist"
   ],
   "scripts": {
-    "browser": "webpack-dev-server --quiet --config ./config/webpack/browser.config.js",
+    "browser": "webpack-dev-server --inline --config ./config/webpack/browser.config.js",
     "build": "npm-run-all build:dev build:prod",
     "build:dev": "cross-env NODE_ENV=development webpack --config config/webpack/dev.config.js --progress --profile --display-error-details --display-cached",
     "build:prod": "cross-env NODE_ENV=production webpack --config config/webpack/prod.config.js --progress --profile --display-error-details --display-cached",
@@ -69,7 +69,7 @@
     "cleanup": "rimraf ./dist ./dist-finale ./build ./coverage",
     "remove:dist": "rimraf ./dist",
     "remove:build": "rimraf ./build",
-    "start": "webpack-dev-server --config ./config/webpack/dev.config.js --hot --inline --watch --port 3000",
+    "start": "webpack-dev-server --open --config ./config/webpack/dev.config.js --hot --inline --watch --port 3000",
     "test": "npm-run-all test:browser test:node",
     "test:browser": "cross-env NODE_ENV=test karma start config/karma.config.js --no-auto-watch",
     "test:node": "cross-env NODE_ENV=test npm run lint:tests && mocha -R spec --bail",

@@ -25,8 +25,11 @@ module.exports = {
 			'/': {
 				bypass: function(req, res, proxyOptions) {
 					return '/test/runner.html';
-				}
-			}
+				},
+        "target": {
+          "protocol": 'http:'
+			  }
+      }
 		}
 	},
 	plugins: [
